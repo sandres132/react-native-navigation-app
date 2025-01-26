@@ -1,6 +1,6 @@
 import { View, Text } from 'react-native';
 
-export default function Tab2Screen() {
+export const Tab2Screen = () => {
     return (
         <View>
             <Text>Tab2Screen</Text>

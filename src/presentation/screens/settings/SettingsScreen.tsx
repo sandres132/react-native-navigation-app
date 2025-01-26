@@ -1,9 +1,12 @@
 import { View, Text } from 'react-native';
+import { globalStyles } from '../../theme/theme';
+import { FlatList } from 'react-native-gesture-handler';
 
-export default function SettingsScreen() {
+export const SettingsScreen = () => {
     return (
-        <View>
+        <View style={ globalStyles.container }>
             <Text>SettingsScreen</Text>
+
         </View>
     )
 }

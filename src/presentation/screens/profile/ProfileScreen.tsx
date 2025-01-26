@@ -1,6 +1,6 @@
 import { View, Text } from 'react-native';
 
-export default function ProfileScreen() {
+export const ProfileScreen = () => {
     return (
         <View>
             <Text>ProfileScreen</Text>

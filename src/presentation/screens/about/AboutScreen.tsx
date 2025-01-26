@@ -1,6 +1,6 @@
 import { View, Text } from 'react-native';
 
-export default function AboutScreen() {
+export const AboutScreen = () => {
     return (
         <View>
             <Text>AboutScreen</Text>
