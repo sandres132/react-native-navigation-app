@@ -7,12 +7,12 @@ import { PrimaryButton } from '../../components/shared/PrimaryButton';
 import { type RootStackParams } from '../../routes/StackNavigator';
 
 const products = [
-    { id:1, name: 'Producto 1' },
-    { id:2, name: 'Producto 2' },
-    { id:3, name: 'Producto 3' },
-    { id:4, name: 'Producto 4' },
-    { id:5, name: 'Producto 5' },
-    { id:6, name: 'Producto 6' },
+    { id:1, name: 'Product 1' },
+    { id:2, name: 'Product 2' },
+    { id:3, name: 'Product 3' },
+    { id:4, name: 'Product 4' },
+    { id:5, name: 'Product 5' },
+    { id:6, name: 'Product 6' },
 ]
 
 export const ProductsScreen = () => {
@@ -33,11 +33,11 @@ export const ProductsScreen = () => {
                 )}
             />
             
-            <Text style={{ marginBottom: 10, fontSize: 30 }}>Ajustes</Text>
+            <Text style={{ marginBottom: 10, fontSize: 30 }}>Settings</Text>
 
             <PrimaryButton
                 onPress={ () => navigation.navigate( 'Settings' ) }
-                label='Ajustes'
+                label='Settings'
             />
         </View>
     )
