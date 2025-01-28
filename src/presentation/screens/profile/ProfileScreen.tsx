@@ -20,6 +20,7 @@ export const ProfileScreen = () => {
             <Text style={{ marginBottom: 10 }}>ProfileScreen</Text>
 
             <PrimaryButton
+                icon='menu-outline'
                 label='Open Menu'
                 onPress={ () => navigation.dispatch( DrawerActions.toggleDrawer ) }
             />

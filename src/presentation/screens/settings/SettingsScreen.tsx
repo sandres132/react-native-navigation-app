@@ -13,10 +13,12 @@ export const SettingsScreen = () => {
             <Text style={{ marginBottom: 10 }}>Settings Screen</Text>
 
             <PrimaryButton
+                icon='return-up-back-outline'
                 label='Return'
                 onPress={ ()=> navigator.goBack() }
             />
             <PrimaryButton
+                icon='home-outline'
                 label='Return Home'
                 onPress={ ()=> navigator.dispatch( StackActions.popToTop() ) }
             />

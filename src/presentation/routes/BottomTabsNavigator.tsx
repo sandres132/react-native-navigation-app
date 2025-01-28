@@ -6,6 +6,7 @@ import { globalColors } from '../theme/theme';
 import { Text } from 'react-native';
 import { TopTabsNavigator } from './TopTabsNavigator';
 import { StackNavigator } from './StackNavigator';
+import { Ionicon } from '../components/shared/Ionicon';
 
 const Tab = createBottomTabNavigator();
 
@@ -13,6 +14,7 @@ export const BottomTabsNavigator = () => {
   return (
     <Tab.Navigator
         screenOptions={{
+            tabBarActiveTintColor: globalColors.primary,
             sceneStyle: {
                 backgroundColor: globalColors.background
             },
@@ -31,9 +33,21 @@ export const BottomTabsNavigator = () => {
             }
         }}
     >
-      <Tab.Screen name="Tab1" options={{ title: 'Tab1', tabBarIcon: ({ color }) => ( <Text style={{ color }}>Tab1</Text> ) }} component={ Tab1Screen } />
-      <Tab.Screen name="Tab2" options={{ title: 'Tab2', tabBarIcon: ({ color }) => ( <Text style={{ color }}>Tab2</Text> ) }} component={ TopTabsNavigator } />
-      <Tab.Screen name="Tab3" options={{ title: 'Tab3', tabBarIcon: ({ color }) => ( <Text style={{ color }}>Tab3</Text> ) }} component={ StackNavigator } />
+      <Tab.Screen
+        name="Tab1"
+        options={{ title: 'Tab1', tabBarIcon: ({ color }) => ( <Ionicon name='color-palette-outline' color={ color } /> ) }}
+        component={ Tab1Screen }
+      />
+      <Tab.Screen
+        name="Tab2"
+        options={{ title: 'Tab2', tabBarIcon: ({ color }) => ( <Ionicon name='albums-outline' color={ color } /> ) }}
+        component={ TopTabsNavigator }
+      />
+      <Tab.Screen
+        name="Tab3"
+        options={{ title: 'Tab3', tabBarIcon: ({ color }) => ( <Ionicon name='layers-outline' color={ color } /> ) }}
+        component={ StackNavigator }
+      />
     </Tab.Navigator>
   );
 }

@@ -5,6 +5,7 @@ import { StackNavigator } from './StackNavigator';
 import { ProfileScreen } from '../screens/profile/ProfileScreen';
 import { globalColors } from '../theme/theme';
 import { BottomTabsNavigator } from './BottomTabsNavigator';
+import { Ionicon } from '../components/shared/Ionicon';
 
 const Drawer = createDrawerNavigator();
 
@@ -30,8 +31,16 @@ export const SideMenuNavigator = () => {
             }}
         >
             {/* <Drawer.Screen name='StackNavigator' component={ StackNavigator } /> */}
-            <Drawer.Screen name='Tabs' component={ BottomTabsNavigator } />
-            <Drawer.Screen name='Profile' component={ ProfileScreen } />
+            <Drawer.Screen
+                options={{ drawerIcon: ({ color }) => ( <Ionicon name='albums-outline' color={ color } /> ) }}
+                name='Tabs'
+                component={ BottomTabsNavigator }
+            />
+            <Drawer.Screen
+                options={{ drawerIcon: ({ color }) => ( <Ionicon name='person-outline' color={ color } /> ) }}
+                name='Profile'
+                component={ ProfileScreen }
+            />
         </Drawer.Navigator>
     )
 }
